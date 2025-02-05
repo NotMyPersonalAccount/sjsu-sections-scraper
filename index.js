@@ -22,7 +22,7 @@ const TABLE_HEADING_PROPS = {
 	Instructor: {
 		process: (section, td) => {
 			section.instructor = td.textContent;
-			section.instructor_email = td.querySelector("a")?.href;
+			section.instructor_email = td.querySelector("a")?.href.replace("mailto:", "");
 		},
 	},
 	Location: { name: "location" },
